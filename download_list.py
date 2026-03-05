@@ -1,3 +1,9 @@
+import urllib.request
+import ssl
+import certifi
+
+context = ssl.create_default_context(cafile=certifi.where())
+response = urllib.request.urlopen('https://www.smashwords.com/books/category/1/downloads/0/free/medium/0', context=context)
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
